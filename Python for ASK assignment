@@ -1,0 +1,43 @@
+#Pemalar dan Pemboleh Ubah
+pi = 3.14
+s = str ("silinder")
+k = str ("kuboid")
+print ("\nKalkulator Geometri (bentuk silinder/kuboid)")
+print ("--------------------------------------------------------------")
+print ("s = silinder, k = kuboid")
+bentuk = str(input("Pilih bentuk yang ingin dikira (s atau k): "))
+if bentuk == "s":
+   print ("(1) Luas permukaan")
+   print ("(2) Isi padu")
+   kira = int(input("Pilih fungsi pengiraan silinder/kuboid: "))
+   if kira == 1:
+      jejari = float(input("Masukkan jejari (cm): "))
+      tinggi = float(input("Masukkan tinggi (cm): "))
+      luas_permukaan = 2*pi*jejari*tinggi + 2*pi*jejari**2
+      print ("Luas permukaan silinder ialah", round(luas_permukaan,2), "cm^2")
+   elif kira == 2:
+      jejari = float(input("Masukkan jejari (cm): "))
+      tinggi = float(input("Masukkan tinggi (cm): "))
+      isi_padu = pi*jejari**2*tinggi
+      print ("Isi padu silinder ialah", round(isi_padu,2), "cm^3")
+   else:
+      print ("Maaf, output tidak dapat dihasilkan")
+elif bentuk == "k":
+   print ("(1) Luas permukaan")
+   print ("(2) Isi padu")
+   kira = int(input("Pilih fungsi pengiraan silinder/kuboid: "))
+   if kira == 1:
+      panjang = float(input("Masukkan panjang (cm): "))
+      lebar = float(input("Masukkan lebar (cm): "))
+      luas_permukaan = panjang*lebar*6
+      print ("Luas permukaan kuboid ialah", round(luas_permukaan,2), "cm^2")
+   elif kira == 2:
+      panjang = float(input("Masukkan panjang (cm): "))
+      lebar = float(input("Masukkan lebar (cm): "))
+      tinggi = float(input("Masukkan tinggi (cm): "))
+      isi_padu = panjang*lebar*tinggi
+      print ("Isi padu kuboid ialah", round(isi_padu,2), "cm^3")      
+   else:
+      print ("Maaf, output tidak dapat dihasilkan")
+else:
+   print ("Pilihan anda tidak sah. Sila cuba lagi.")
